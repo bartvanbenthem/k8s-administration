@@ -1,5 +1,5 @@
 # Description
-CLI Tool to list all the configured hostnames per namespace on an kubernetes cluster.
+Packages and CLI interface to administer and report kubernetes clusters.
 
 ## prerequisites
 Install kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
@@ -10,8 +10,8 @@ CLI Tool to list all the configured hostnames per namespace on an kubernetes clu
 
 ``` shell
 $ export K8S_KUBECONFIG='~/.kube/config' # give full path if ~ gives an error
-$ git clone https://github.com/bartvanbenthem/k8s-hostname.git
-$ sudo k8s-hostname/bin/k8s-hostname /usr/bin/
+$ git clone https://github.com/bartvanbenthem/k8s-administration.git
+$ sudo k8s-administration/bin/k8s-administration /usr/bin/
 
-$ k8s-hostname
+$ k8s-k8s-administration
 ```
