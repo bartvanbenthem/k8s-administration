@@ -23,20 +23,8 @@ type Host struct {
 type K8s struct{}
 
 func main() {
-	// Check if there are empty ENV Variables that need to be set
-	CheckEmptyEnVar()
 	// print hostnames per namespace
 	PrintHostnames()
-}
-
-func CheckEmptyEnVar() {
-	vars := []string{"K8S_KUBECONFIG"}
-
-	for _, v := range vars {
-		if os.Getenv(v) == "" {
-			log.Fatalf("Fatal Error: env variable [ %v ] is empty\n", v)
-		}
-	}
 }
 
 func (k *K8s) GetCurrentContext() string {
