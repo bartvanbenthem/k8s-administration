@@ -1,5 +1,5 @@
 # Description
-Multiple packages and a CLI interface to administer and report kubernetes clusters.
+Multiple packages and a CLI interface to effective administer kubernetes clusters.
 
 ## prerequisites
 Install kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
