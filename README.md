@@ -20,5 +20,5 @@ $ k8s-k8s-administration
 * export all ingress hostnames and corresponding namespaces on the cluster 
 * export all assigned admin roles on the cluster 
 * export all privelidged containers running on the cluster
-... 
+* ... 
 
