@@ -1,7 +1,7 @@
 # Description
 Multiple packages and a CLI interface to effective administer kubernetes clusters.
 
-## prerequisites
+## Prerequisites
 Install kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 
@@ -15,3 +15,10 @@ $ sudo k8s-administration/bin/k8s-administration /usr/bin/
 
 $ k8s-k8s-administration
 ```
+
+## Functions (in development)
+* export all ingress hostnames and corresponding namespaces on the cluster 
+* export all assigned admin roles on the cluster 
+* export all privelidged containers running on the cluster
+... 
+
