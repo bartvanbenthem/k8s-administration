@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
@@ -67,14 +68,14 @@ func (k *K8s) CreateClientSet() *kubernetes.Clientset {
 
 func (k *K8s) GetHostname(clientset *kubernetes.Clientset) ([]Host, error) {
 	var hosts []Host
-
-	ns, err := clientset.CoreV1().Namespaces().List(v1.ListOptions{})
+	ns, err := clientset.CoreV1().Namespaces().List(context.TODO(), v1.ListOptions{})
 	if err != nil {
 		return nil, err
 	}
 
 	for _, n := range ns.Items {
-		ing, err := clientset.NetworkingV1beta1().Ingresses(n.GetName()).List(v1.ListOptions{})
+		ing, err := clientset.NetworkingV1().Ingresses(n.GetName()).
+			List(context.TODO(), v1.ListOptions{})
 		if err != nil {
 			return nil, err
 		}
@@ -89,7 +90,6 @@ func (k *K8s) GetHostname(clientset *kubernetes.Clientset) ([]Host, error) {
 			}
 		}
 	}
-
 	return hosts, err
 }
 

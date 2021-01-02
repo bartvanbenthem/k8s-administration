@@ -1,5 +1,5 @@
 # Description
-Print all ingress hostnames and corresponding namespaces on the cluster 
+Print all ingress hostnames and corresponding namespaces and contexts.
 
 ## Prerequisites
 Install kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
