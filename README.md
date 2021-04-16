@@ -11,7 +11,7 @@ CLI Tool to list all the configured hostnames per namespace on an kubernetes clu
 ``` shell
 $ export K8S_KUBECONFIG='~/.kube/config' # give full path if ~ gives an error
 $ git clone https://github.com/bartvanbenthem/k8s-listners.git
-$ sudo k8s-listners/bin/k8s-listners /usr/bin/
+$ sudo cp k8s-listners/bin/k8s-listners /usr/bin/
 
 $ k8s-listners
 ```
